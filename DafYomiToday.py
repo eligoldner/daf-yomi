@@ -1,12 +1,12 @@
-import datetime
+from datetime import timedelta, date
 from zmanim.limudim.calculators.daf_yomi_bavli import DafYomiBavli
 # from zmanim import hebrew_calendar -- want to print Hebrew date as well
 
-today = datetime.date.today()
-yesterday = today - datetime.timedelta(days = 1)
-oneWeek = today - datetime.timedelta(days = 7)
-OneMonth = today - datetime.timedelta(days = 30)
-threeMonths = today - datetime.timedelta(days = 90)
+today = date.today()
+yesterday = today - timedelta(days = 1)
+oneWeek = today - timedelta(days = 7)
+OneMonth = today - timedelta(days = 30)
+threeMonths = today - timedelta(days = 90)
 
 daf = DafYomiBavli()
 daf1 = daf.limud(today).description()
