@@ -6,8 +6,8 @@ def daterange(start_date, end_date):
         yield start_date + timedelta(n)
 
 daf = DafYomiBavli()
-start_date = date(2020, 1, 5)
-end_date = date(2020, 1, 31)
+start_date = date(2020, 2, 1)
+end_date = date(2020, 2, 28)
 LearningItems = []
 
 # startTime = time()
@@ -19,11 +19,11 @@ for Daf4Day in daterange(start_date, end_date):
     OneMonth = today - timedelta(days = 30)
     threeMonths = today - timedelta(days = 90)
 
-    LearningToday = today, daf.limud(today).description(), daf.limud(yesterday).description(),daf.limud(oneWeek).description(),daf.limud(OneMonth).description(),daf.limud(threeMonths).description()
+    LearningToday = today.strftime('%B %d, %Y'), daf.limud(today).description(), daf.limud(yesterday).description(),daf.limud(oneWeek).description(),daf.limud(OneMonth).description(),daf.limud(threeMonths).description()
     LearningItems.append(LearningToday)
 
 print (LearningItems)
 
 # endTime = time()
 # elapsedTime = endTime - startTime
-print (f'Start time {startTime}, End Time {endTime}')#, elapsed time {elapsedTime}')
+# print (f'Start time {startTime}, End Time {endTime}')#, elapsed time {elapsedTime}')
